@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import UserPage from  './pages/UserPage'
+import Footer from  './pages/Footer'
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
@@ -19,9 +21,11 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path='/' component={HomePage} />
+            <Route exact path='/' component={UserPage} />
             <Route exact path='/login' component={LoginPage} />
           </Switch>
         </>
+          <Footer />
       </Router>
     </ApolloProvider>
   );

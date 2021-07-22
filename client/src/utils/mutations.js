@@ -9,3 +9,42 @@ export const LOGIN_USER = gql`
         }
     }
 `
+
+export const ADD_USER = gql`
+    mutation createUser($email: String!, $email: String!, $password: String!) {
+        createUser(email: $email, email: $email, password: $password) {
+            token
+            user {
+                _id
+                email
+            }
+        }
+    }
+`
+
+export const SAVE_BOOK = gql`
+    mutation saveItem
+        ($bookdata : itemInput!) {
+        saveItem(itemdata: $itemdata) {
+            _id
+            username
+            email 
+            savedbooks {
+                bookId
+                authors
+                description
+                image
+                link
+                title
+            }
+        }
+    }
+`
+
+export const REMOVE_BOOK = gql`
+    mutation removeBook($bookId: ID!) {
+        removeBook(bookId: $bookId) {
+            bookId
+        }
+    }
+`

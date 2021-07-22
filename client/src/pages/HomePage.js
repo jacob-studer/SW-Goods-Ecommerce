@@ -4,11 +4,31 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return (
+        <div> 
+
+          This is where the Slideshow/Jumbotron will go
+
         <div>
 
-        <h1>Connected!</h1>
+        <div>
+
+          This is where two side by side links will go
+
+        </div>
 
         <div>
+
+          This is where 4 items will go in tiles
+
+        </div>
+
+        <div>
+
+          This is where the footer will go
+
+        </div>
+
+
 
         {Auth.loggedIn() ? (
             <>
