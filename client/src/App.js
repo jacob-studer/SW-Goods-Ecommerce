@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
-import UserPage from  './pages/UserPage'
-import Footer from  './pages/Footer'
+import UserPage from './pages/UserPage'
+import Footer from './components/Footer'
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
