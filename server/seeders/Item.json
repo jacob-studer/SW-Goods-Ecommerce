@@ -1,0 +1,14 @@
+[
+    {
+        "description": "this is a hat.",
+        "image": "",
+        "itemname": "hat",
+        "category": "apparel" 
+    },
+    {
+        "description": "this is a shirt.",
+        "image": "",
+        "itemname": "shirt",
+        "category": "apparel" 
+    }
+]

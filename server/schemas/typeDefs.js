@@ -12,10 +12,9 @@ const typeDefs = gql`
 
   type Item {
     description: String!
-    itemId: String!
     image: String
-    link: String
     itemname: String!
+    category: String!
   }
 
   type Auth {

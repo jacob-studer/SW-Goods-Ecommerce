@@ -7,6 +7,7 @@ const resolvers = {
     user: async (parent, { email, password }, context) => {
       const user = await User.findOne({_id:context.user._id})
       return user
+    item: async (parent, { })
     },
   },
   Mutation: {

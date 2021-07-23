@@ -14,10 +14,11 @@ const itemSchema = new Schema({
     type: String,
     required: true,
   },
+
   category: {
     type: String,
     required: true,
   },
 });
 
-module.exports = bookSchema;
+module.exports = itemSchema;
