@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import UserPage from './pages/UserPage'
 import Footer from './components/Footer'
+import ItemSearch from './pages/ItemSearchPage'
+import ItemPage from './pages/ItemPage'
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
@@ -19,10 +21,13 @@ function App() {
       <Router>
         <>
           <Navbar />
+          {/* give the paramater after the path - parameter id */}
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route exact path='/' component={UserPage} />
+            <Route exact path='/itemsearch/:category' component={ItemSearch} />
             <Route exact path='/login' component={LoginPage} />
+            <Route exact path='/userpage' component={UserPage} />
+            <Route exact path='/itempage' component={ItemPage} />
           </Switch>
         </>
           <Footer />

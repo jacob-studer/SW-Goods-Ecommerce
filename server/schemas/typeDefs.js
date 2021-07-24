@@ -1,43 +1,60 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type User {
-    _id: ID!
-    username: String!
-    email: String!
-    password: String!
-    saveditems: [Item]
-    itemcount: Int
+  type Category {
+    _id: ID
+    name: String
   }
 
-  type Item {
-    description: String!
+  type Product {
+    _id: ID
+    name: String
+    description: String
     image: String
-    itemname: String!
-    category: String!
+    quantity: Int
+    price: Float
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
+  type User {
+    _id: ID
+    firstName: String
+    lastName: String
+    email: String
+    orders: [Order]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
-  }
-
-  input ItemInput {
-    description: String!
-    itemId: String!
-    image: String
-    link: String
-    itemname: String!
   }
 
   type Query {
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
     user: User
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
-    saveItem(itemdata: itemInput!): User
-    removeItem(itemId: ID!): User
   }
 `;
+
+module.exports = typeDefs;
