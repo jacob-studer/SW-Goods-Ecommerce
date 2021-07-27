@@ -48,7 +48,7 @@ function Login(props) {
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input
-            placeholder="******"
+            placeholder="password"
             name="password"
             type="password"
             id="pwd"
@@ -57,7 +57,7 @@ function Login(props) {
         </div>
         {error ? (
           <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+            <p className="error-text">Incorrect Login Information</p>
           </div>
         ) : null}
         <div className="flex-row flex-end">
