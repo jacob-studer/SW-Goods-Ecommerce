@@ -49,51 +49,60 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="nav-link">
             <Link to="/orderHistory">
               Order History
             </Link>
           </li>
-          <li className="mx-1">
+          <li className="nav-link">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
+          </li>
+          <li className="nav-link">
+            <Link to="/cart">
+              Cart
+            </Link>
           </li>
         </ul>
       );
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="nav-link">
             <Link to="/signup">
               Signup
             </Link>
           </li>
-          <li className="mx-1">
+          <li className="nav-link">
             <Link to="/login">
               Login
             </Link>
           </li>
+          <li className="nav-link">
+            <Link to="/cart">
+              Cart
+            </Link>
+          </li>
         </ul>
+
+        
+
+        
       );
     }
   }
 
   return (
     
-    <header className="flex-row px-1">
+    <header className="flex-row">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="SW Goods"></span>
-          S&W Goods
+          <img src={require('./assets/brand-name.jpg')} alt='S&W Goods'></img>
         </Link>
       </h1>
-
-      <nav>
-        {showNavigation()}
-      </nav>
-
+<div className="flex-row">
 {categories.map((item) => (
   <button
     key={item._id}
@@ -104,7 +113,12 @@ function Nav() {
     {item.name}
   </button>
 ))}
-      
+</div>
+
+      <nav className="nav-links">
+        {showNavigation()}
+      </nav>
+
     </header>
 
 
