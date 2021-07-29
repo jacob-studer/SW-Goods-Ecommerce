@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import { useLazyQuery } from '@apollo/client';
-import { QUERY_CHECKOUT } from '../utils/queries';
+import { useMutation } from '@apollo/client';
+import { ADD_ORDER} from '../utils/mutations';
 import { idbPromise } from '../utils/helpers';
 import CartItem from '../components/CartItem/index';
 import Auth from '../utils/auth';
@@ -12,15 +12,15 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
-  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  const [getCheckout, { data }] = useMutation(ADD_ORDER);
 
-  useEffect(() => {
-    if (data) {
-      stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
-      });
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     stripePromise.then((res) => {
+  //       res.redirectToCheckout({ sessionId: data.checkout.session });
+  //     });
+  //   }
+  // }, [data]);
 
   useEffect(() => {
     async function getCart() {
@@ -47,12 +47,15 @@ const Cart = () => {
 
   function submitCheckout() {
     const productIds = [];
-
+    console.log('checkout')
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
       }
+      
     });
+
+    console.log(productIds)
 
     getCheckout({
       variables: { products: productIds },

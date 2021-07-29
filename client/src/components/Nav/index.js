@@ -11,6 +11,8 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
+import brandimage from '../../assets/brand-name.jpg'
+
 function Nav() {
 
     const [state, dispatch] = useStoreContext();
@@ -99,10 +101,10 @@ function Nav() {
     <header className="flex-row">
       <h1>
         <Link to="/">
-          <img src={require('./assets/brand-name.jpg')} alt='S&W Goods'></img>
+          <img src={require('../../assets/brand-name.jpg').default} alt='S&W Goods'></img>
         </Link>
       </h1>
-<div className="flex-row">
+<div className="flex-row header">
 {categories.map((item) => (
   <button
     key={item._id}

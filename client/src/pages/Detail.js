@@ -73,9 +73,13 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <div className="flex-row details">
+          <img
+            src={`/images/${currentProduct.image}`}
+            alt={currentProduct.name}
+          />
 
+          <div>
           <h2>{currentProduct.name}</h2>
 
           <p>{currentProduct.description}</p>
@@ -85,10 +89,9 @@ function Detail() {
             <button onClick={addToCart}>Add to Cart</button>
           </p>
 
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+    
+          </div>
+
         </div>
       ) : null}
     </>

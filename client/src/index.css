@@ -1,3 +1,13 @@
+body {
+  background-image: url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -19,4 +29,24 @@
 button {
   border: none;
   background-color: white;
+}
+
+.jumbotron {
+  background-image: url(./assets/jumbotron-image.JPG);
+  height: 300px;
+  text-align: center;
+}
+
+/* jumbotron */
+
+.jumbotron p {
+  color: white;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 36px;
+  text-shadow: 2px 2px black;
+}
+
+.details {
+  margin-top: 7%;
+  margin-bottom: 7%;
 }
