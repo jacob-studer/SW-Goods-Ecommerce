@@ -48,6 +48,7 @@ const Cart = () => {
   function submitCheckout() {
     const productIds = [];
     console.log('checkout')
+    alert('checkout successful')
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);

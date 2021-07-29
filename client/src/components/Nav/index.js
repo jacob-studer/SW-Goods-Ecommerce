@@ -11,8 +11,6 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
-import brandimage from '../../assets/brand-name.jpg'
-
 function Nav() {
 
     const [state, dispatch] = useStoreContext();
@@ -53,7 +51,12 @@ function Nav() {
         <ul className="flex-row">
           <li className="nav-link">
             <Link to="/orderHistory">
-              Order History
+              Orders
+            </Link>
+          </li>
+          <li className="nav-link">
+            <Link to="/cart">
+              Cart
             </Link>
           </li>
           <li className="nav-link">
@@ -61,11 +64,6 @@ function Nav() {
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
-          </li>
-          <li className="nav-link">
-            <Link to="/cart">
-              Cart
-            </Link>
           </li>
         </ul>
       );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { Alert } from 'react-alert'
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../utils/GlobalState';
 import {
@@ -52,6 +53,7 @@ function Detail() {
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
+      
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: id,
@@ -61,12 +63,15 @@ function Detail() {
         ...itemInCart,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
+      alert('added item to cart')
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentProduct, purchaseQuantity: 1 },
+        product: { ...currentProduct, purchaseQuantity: 1 }
+        ,
       });
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+      alert('added item to cart')
     }
   };
 

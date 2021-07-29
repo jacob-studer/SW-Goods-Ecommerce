@@ -19,8 +19,8 @@ db.once('open', async () => {
     {
       name: 'Laptop',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'image.jpg',
+        'A laptop computer, sometimes called a notebook computer by manufacturers, is a battery- or AC-powered personal computer generally smaller than a briefcase that can easily be transported and conveniently used in temporary spaces such as on airplanes, in libraries, temporary offices, and at meetings.',
+      image: 'laptop.jpg',
       category: categories[0]._id,
       price: 599.99,
       quantity: 1
@@ -28,8 +28,8 @@ db.once('open', async () => {
     {
       name: 'TV',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'image.jpg',
+        'An electronic system of transmitting transient images of fixed or moving objects together with sound over a wire or through space by apparatus that converts light and sound into electrical waves and reconverts them into visible light rays and audible sound.',
+      image: 'tv.jpg',
       category: categories[0]._id,
       price: 399.99,
       quantity: 1
@@ -38,8 +38,8 @@ db.once('open', async () => {
       name: 'Shirt',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'image.jpg',
+        'A shirt is a cloth garment for the upper body (from the neck to the waist).',
+      image: 'shirt.jpg',
       price: 19.99,
       quantity: 1
     },
@@ -47,8 +47,8 @@ db.once('open', async () => {
       name: 'Pants',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'image.jpg',
+        'an outer garment covering each leg separately and usually extending from the waist to the ankle',
+      image: 'pants.jpg',
       price: 29.99,
       quantity: 1
     },
@@ -56,8 +56,8 @@ db.once('open', async () => {
       name: 'Shoes',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'image.jpg',
+        'A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion',
+      image: 'shoes.jpg',
       price: 69.99,
       quantity: 1
     },
@@ -65,8 +65,8 @@ db.once('open', async () => {
       name: 'Blouse',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'image.jpg',
+        'a usually loose-fitting garment especially for women that covers the body from the neck to the waist',
+      image: 'blouse.jpg',
       price: 19.99,
       quantity: 1
     },
@@ -74,8 +74,8 @@ db.once('open', async () => {
       name: 'Skirt',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'image.jpg',
+        'A skirt is the lower part of a dress or a separate outer garment that covers a person from the waist downwards',
+      image: 'skirt.jpg',
       price: 29.99,
       quantity: 1
     },
@@ -83,8 +83,8 @@ db.once('open', async () => {
       name: 'Shoes',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'image.jpg',
+        'A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion',
+      image: 'womens-shoes.jpg',
       price: 69.99,
       quantity: 1
     },
@@ -92,8 +92,8 @@ db.once('open', async () => {
       name: 'Bed Frame',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'image.jpg',
+        'A bed frame or bedstead is the part of a bed used to position the mattress and base (foundation)',
+      image: 'bedframe.jpg',
       price: 159.99,
       quantity: 1
     },
@@ -101,8 +101,8 @@ db.once('open', async () => {
       name: 'nightstand',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'image.jpg',
+        'A nightstand, alternatively night table, bedside table, daystand or bedside cabinet, is a small table or cabinet designed to stand beside a bed or elsewhere in a bedroom',
+      image: 'nightstand.jpg',
       price: 79.99,
       quantity: 1
     },
@@ -110,8 +110,8 @@ db.once('open', async () => {
       name: 'office chair',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'image.jpg',
+        'An office chair, or desk chair, is a type of chair that is designed for use at a desk in an office.',
+      image: 'office-chair.jpg',
       price: 199.99,
       quantity: 1
     }
