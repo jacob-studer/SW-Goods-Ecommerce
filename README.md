@@ -13,8 +13,7 @@
 3. [Installation](#Installation)
 4. [Technologies](#Technologies)
 5. [Contributors](#Contributors)
-6. [Steps](#Steps)
-7. [Screenshot](#Screenshot)
+6. [Screenshot](#Screenshot)
 
 # Description
 
@@ -41,4 +40,4 @@ Jake Studer
 
 ### SW Goods Screenshot
 
-![Demo of App]()
+![Demo of App](https://raw.githubusercontent.com/jacob-studer/sw-goods-ecommerce/main/client/src/assets/screenshot.jpg)
